@@ -60,6 +60,7 @@ In this example we will explore the energy landscape of Carbon (cell of 2 atoms)
 
 Try to use gencell to generate an input for Carbon, type `gencell` if you need help. The C2.cell should have two C atoms (C1 and C2), thus a small `#VARVOL`. Think of an appropriate `#MINSEP` and why.
 
+```console
 $ cat C2.cell
 
 %BLOCK LATTICE_CART
@@ -71,6 +72,7 @@ $ cat C2.cell
 %BLOCK POSITIONS_FRAC **C 0.0 0.0 0.0 #** C1 % NUM=1**C 0.0 0.0 0.0 #** C2 % NUM=1%ENDBLOCK POSITIONS_FRAC
 ** #MINSEP=1.3 **
 KPOINTS_MP_SPACING 0.07
+```
 
 The only AIRSS related command in the cell file is `#MINSEP=1.3`. This is not essential for the light elements, but for transition metals it is important to avoid core overlap to prevent poor convergence of the electronic structure. The k-points sampling density is 0.07, with 0.05 more appropriate for metallic (or nearly metallic) systems.
 
