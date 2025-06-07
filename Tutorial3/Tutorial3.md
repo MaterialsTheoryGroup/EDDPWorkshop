@@ -104,7 +104,7 @@ Now stop your eddp search and move to the hot_search directory.
 The hot-airss algorithm replaces a static structure relaxation with a more complex minimisation procedure including a short molecular dynamics anneal:
 
 
-![](./hotairss_higherres.png)
+![hotairss](hotairss_higherres.png)
 
 
 The MD anneal helps to eliminate shallow energy minima from the search results, with the aim of revealing higher symmetry structures for large complex systems. See the examples below for boron:
