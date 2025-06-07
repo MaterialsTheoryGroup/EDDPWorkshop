@@ -9,8 +9,9 @@ We will be investigating the ionic conductor LiH, using AIRSS with both DFT and 
 
 Before embarking on an AIRSS search, it is essential to determine the current state of knowledge on the system we are interested in. Search Google Scholar more generally, and then look for already existing crystal structures in the [Materials Project](https://www.google.com/url?q=https://next-gen.materialsproject.org/&sa=D&source=editors&ust=1747677490655665&usg=AOvVaw3A8wMptcMRucNZX8SLCyIl) and on [ICSD](https://www.google.com/url?q=https://www.psds.ac.uk/icsd&sa=D&source=editors&ust=1747677490655739&usg=AOvVaw2BypKtQyw_ffr7TNQb6wNh). In this case, you will quickly discover that the ground state of LiH at ambient conditions crystallises in the cubic rocksalt structure (space group Fm-3m, shown below). Since this is a demonstration, don't expect to find anything that contradicts this (but let us know if you do...). Knowledge of the Fm-3m-LiH structure will come in useful when designing our AIRSS search.
 
-<p style="text-align: center;"> 
+
 ![Cubic_LiH](LiH_Fm-3m_export.png)
+<p style="text-align: center;"> 
 Fm-3m strcutre of LiH
 </p>
 
