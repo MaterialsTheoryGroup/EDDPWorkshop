@@ -32,8 +32,6 @@ XXX
 
 - Assess the quality of the potential by looking at the training, validation and testing plots.
 
-- Look at the top of the nohup.out file to determine what hyper parameters were used.
-
 For this exercise we are interested in CN structures at 150 GPa that may be metastable down to ambient pressure. This means the dataset should contain structures spanning at least the pressure range 0-150 GPa.
 
 Use the commands:
