@@ -62,23 +62,24 @@ Try to use gencell to generate an input for Carbon, type `gencell` if you need
 
 $ cat C2.cell
 
-%BLOCK LATTICE_CART\
-1.709975 0 0\
-0 1.709975 0\
-0 0 1.709975\
-%ENDBLOCK LATTICE_CART\
-**#**VARVOL=5\
-%BLOCK POSITIONS_FRAC**C 0.0 0.0 0.0 #** C1 % NUM=1**C 0.0 0.0 0.0 #** C2 % NUM=1%ENDBLOCK POSITIONS_FRAC\
-**#**MINSEP=1.3\
+%BLOCK LATTICE_CART
+1.709975 0 0
+0 1.709975 0
+0 0 1.709975
+%ENDBLOCK LATTICE_CART
+** #VARVOL=5 **
+%BLOCK POSITIONS_FRAC **C 0.0 0.0 0.0 #** C1 % NUM=1**C 0.0 0.0 0.0 #** C2 % NUM=1%ENDBLOCK POSITIONS_FRAC
+** #MINSEP=1.3 **
 KPOINTS_MP_SPACING 0.07
 
 The only AIRSS related command in the cell file is `#MINSEP=1.3`. This is not essential for the light elements, but for transition metals it is important to avoid core overlap to prevent poor convergence of the electronic structure. The k-points sampling density is 0.07, with 0.05 more appropriate for metallic (or nearly metallic) systems.
 
 How can you specify the pressure (100 GPa) when running  `airss.pl`? Type `airss.pl -h` if need be.
 
-**$** airss.pl -press 100 -max 10 -seed C2
+```console
+$ airss.pl -press 100 -max 10 -seed C2
 
-**$** ca -r
+$ ca -r
 
 C2-90568-5971-4      100.00     4.699  -151.660  2 C            Fd-3m      1\
 C2-90568-5971-5      100.00     4.699     0.000  2 C            Fd-3m      1\
@@ -91,6 +92,7 @@ C2-90568-5971-10     100.00     4.691     0.010  2 C            Fd-3m      1\
 C2-90568-5971-3      100.05     5.379     0.871  2 C            C2/m       1\
 C2-90568-5971-9      100.03     4.477     2.555  2 C            P1         1
 
+```
 In this very small cell, most of the structures found are the diamond structure (space group `Fd-3m`). If the search is repeated at lower pressures, for example 1 GPa, more graphitic structures will be found.
 
 The example above is available on the AIRSS page <https://airss-docs.github.io/tutorials/examples/>, many other examples are provided if you want to deepen your skills on AIRSS.
