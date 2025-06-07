@@ -1,18 +1,18 @@
 # Tutorial 3
 
-In this tutorial we will look at carbon-nitrogen mixtures. At high pressure these systems form complex covalently bonded solids.
+In this tutorial we will look at carbon-nitrogen mixtures, which form complex covalently bonded solids at high pressures.
 
 We will use a two different approaches to explore stable CN structures:
 
-- A Symmetry constrained search and EDDP.
+- A Symmetry constrained search with an EDDP.
 
-- A Molecular Dynamics based search with EDDP (hot-airss).
+- A Molecular Dynamics based search with an EDDP (hot-airss).
 
-When searching for covalently bonded solids, we may need to use large system sizes in our search. This can be particularly important when investigating system with large amounts of disorder.
+When searching for solids with complex bonding networks, we may need to use large system sizes. This can be particularly important when investigating system with large amounts of disorder.
 
-To search larger systems, it may be tempting to simply increase the number of atoms in our cell file. However, as we increase the number of atoms in our system, the number of minima in the energy landscape rapidly increases (see Stillinger 1999 DOI: https://doi.org/10.1103/PhysRevE.59.48). The overwhelming majority of these minima resemble rapidly quenched liquids, with high disorder and high energy. When structure searching we likely to be more interested in the ordered structures at low energy close to the convex hull. We can to introduce a couple of strategies to bias the search towards these structures.
+To search larger systems, it may be tempting to simply increase the number of atoms in our cell file. However, as we increase the number of atoms in our system, the number of minima in the energy landscape rapidly increases (see Stillinger 1999 DOI: https://doi.org/10.1103/PhysRevE.59.48). The overwhelming majority of these minima resemble rapidly quenched liquids, with high disorder and high energy. When structure searching we are more interested in the ordered structures at low energy close to the convex hull. We can to introduce a couple of strategies to bias the search towards these structures.
 
-One strategy is to enforce a certain number, or range, of symmetry operations. Other options include using a more sophisticated optimiser by introducing molecular dynamics. Over the next 2 tutorials we will compare these two strategies.
+One strategy is to enforce a certain number, or range, of symmetry operations. Other options include using a more sophisticated optimisation algorithm by introducing molecular dynamics. In this tutorial we will compare these two strategies.
 
 
 ## **1\. Evaluating the dataset and EDDP**
@@ -23,7 +23,9 @@ First, navigate to the to CN_eddp directory. You should see the input and output
 
 ```console
 
-$ls 
+$ls
+
+XXX
 ```
 
 - How many structures were used to train this potential? (hint use the cryan summary)
@@ -32,7 +34,7 @@ $ls
 
 - Look at the top of the nohup.out file to determine what hyper parameters were used.
 
-For this exercise we are interested in CN structures at 150 GPa that may be metastable down to ambient pressure. This means the dataset needs structures spanning this pressure range.
+For this exercise we are interested in CN structures at 150 GPa that may be metastable down to ambient pressure. This means the dataset should contain structures spanning at least the pressure range 0-150 GPa.
 
 Use the commands:
 
@@ -42,7 +44,7 @@ $xmgrace CN-ph.xgr &
 
 ```
 
-to plot a 'pressure hull'. This shows the pressures of all structures in the database and their relative enthalpies. Is the dataset suitable for our application?
+to plot a 'pressure hull'. This shows the pressures of all structures in the dataset and their relative enthalpies. Is the dataset suitable for our application?
 
 Store the potential to a unique directory, ready to be used, with the ddpstore command:
 
@@ -60,6 +62,8 @@ Try making the necessary changes to the cell file. Once you are satisfied, check
 
 Submit the search on 20 cores with the following command:
 
+XXX
+
 Once your job has started running, check that structures are being generated but using ca -s.
 
 Whilst we wait for the structure search to proceed, familiarise yourself with the structure in help/lanieletal/C3N4.res Make a note of the space group and the number of formula units.
@@ -71,6 +75,7 @@ Use cryan to look at the list of unique structures within a 100 meV/atom energy 
 Is the Laniel structure there? Take some time to look through the various low energy structures in vesta.
 
 Now generate a structural density of states to analyse the energy distribution of the various minima we have found
+
 ```console
 $ca -sd 0.01
 ```
@@ -79,15 +84,16 @@ The 0.01 parameter is a gaussian smoothing, try a few parameters and decide on o
 
 Can you identify different families of structures in the structure DOS?
 
-Now we a high energy structure from and run some short molecular dynamics.
+Now we will take a high energy structure from our search and run a short molecular dynamics trajectory.
 
-first convert the res file to a cell file (note: some <> characters here indicate variables for you to change, others redirect input into files or cryan):
+first convert the res file to a cell file (note: some <> characters here indicate variables for you to change, others redirect input to files or cryan):
 
 ```console
 $ ca -res -cell < <structure_id>.res > <structure_id>.cell
 ```
 
-make a copy of the .eddp file to match your\
+make a copy of the .eddp file to match your structure_id 
+
 ```console
 $ cp CN.eddp <structure_id>.eddp
 ```
@@ -96,6 +102,10 @@ run ramble:\
 ```console
 $ ramble -ompnp 2 -m 1000 -ts 0.5 -p 150 -dr 0.01 -tt 500
 ```
+
+Now visualise the result in ovito.
+
+
 
 ## **3\. Running a hot-airss search.**
 
