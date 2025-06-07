@@ -25,7 +25,7 @@ First, navigate to the to CN_eddp directory. You should see the input and output
 
 $ls
 
-XXX
+atomic.data  CN  CN.cell  CN.eddp  CN.param  data.res.xz  flock.out  help  logs  marks-save  plots
 ```
 
 - How many structures were used to train this potential? (hint use the cryan summary)
