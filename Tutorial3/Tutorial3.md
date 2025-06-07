@@ -38,7 +38,7 @@ Use the commands:
 
 ```
 $ca -ph
-$xmgrace CN-ph.xgr &
+$xmgrace C3N4-phull.agr &
 
 ```
 
