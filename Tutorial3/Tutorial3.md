@@ -1,6 +1,6 @@
 # Tutorial 3
 
-In this tutorial we will look at carbon-nitrogen mixtures. These compounds have historically garnered interest as possible candidates super-hard materials. They form complex covalently bonded solids at high pressures, which are recoverable down to ambient conditions.
+In this tutorial we will look at carbon-nitrogen mixtures. These compounds have historically garnered interest as possible candidates for super-hard materials. They form complex covalently bonded solids at high pressures, which are recoverable down to ambient conditions.
 
 A recent study synthesised 3 carbon-nitrogen compounds, by laser heating under pressure, and solved their structures (https://doi.org/10.1002/adma.202308030)
 
