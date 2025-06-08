@@ -1,0 +1,135 @@
+                                                       
+               $$\                 $$\                 
+               $$ |                \__|                
+      $$$$$$$\ $$$$$$$\   $$$$$$\  $$\ $$$$$$$\        
+     $$  _____|$$  __$$\  \____$$\ $$ |$$  __$$\       
+     $$ /      $$ |  $$ | $$$$$$$ |$$ |$$ |  $$ |      
+     $$ |      $$ |  $$ |$$  __$$ |$$ |$$ |  $$ |      
+     \$$$$$$$\ $$ |  $$ |\$$$$$$$ |$$ |$$ |  $$ |      
+      \_______|\__|  \__| \_______|\__|\__|  \__|      
+                                                       
+    automated generation of data derived potentials    
+                                                       
+       author: Chris J. Pickard, Cambridge 2023        
+                                                       
+    summary of parameters - 
+
+      ndata:       0
+      ncycles:     100
+      pressure:    150 GPa
+      lowpress:    50 GPa
+      prand:       true
+      rcut:        3.75 Ang
+      full:        0
+      minima:      3000
+      nbest:       1
+      deviation:   0.0
+      waitseconds: 60
+      jiggles:     1
+      Jiggles:     300
+      amp:         0.02 Ang
+      temp:        none K
+      step:        1 fs
+      time:        10 ps
+      npoly:       16,4
+      lowexp:      2
+      highexp:     10
+      nbody:       3
+      nnodes:      20,20
+      deltae:      100
+      compress:    1.0
+      mpinp:       4
+      ompnp:       32
+      minpot:      0
+      average:     false
+      natexp:      0.5
+      nembed:      0
+      lmin:        0
+      asym:        0
+      keep:        false
+      noearly:     false
+      noparity:    false
+      email:       false
+      seed:        CN
+
+      remotenode:  c8
+      remotecores: 32
+
+    job starting: CN Fri 19 Jul 20:02:41 BST 2024
+
+    called as chain -s CN -f 0 -n 100 -m 3000 -j 1 -J 300 -B 3 -P 16,4 -N 20,20 -r 3.75 -O 32 -M 4 -R -l 50 -p 150 -E 100
+
+    unpacking data.res.xz
+    skipping full randomisation
+    no marks
+    warm start from CN.eddp
+
+    ==============================  1  ==============================
+
+    launching airss ...
+[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    1 structures[0K    71 structures[0K    163 structures[0K    255 structures[0K    329 structures[0K    414 structures[0K    501 structures[0K    576 structures[0K    666 structures[0K    741 structures[0K    823 structures[0K    900 structures[0K    982 structures[0K    1058 structures[0K    1140 structures[0K    1215 structures[0K    1299 structures[0K    1387 structures[0K    1460 structures[0K    1531 structures[0K    1621 structures[0K    1704 structures[0K    1785 structures[0K    1869 structures[0K    1940 structures[0K    2027 structures[0K    2101 structures[0K    2179 structures[0K    2263 structures[0K    2336 structures[0K    2407 structures[0K    2473 structures[0K    2552 structures[0K    2631 structures[0K    2708 structures[0K    2786 structures[0K    2856 structures[0K    2931 structures[0K    3013 structures
+    stopping airss ...
+    shaking structures ...
+    launching crud ...
+[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    3000 remaining[0K    2995 remaining[0K    2986 remaining[0K    2942 remaining[0K    2892 remaining[0K    2845 remaining[0K    2796 remaining[0K    2766 remaining[0K    2753 remaining[0K    2747 remaining[0K    2745 remaining[0K    2744 remaining[0K    2744 remaining[0K    2744 remaining[0K    2744 remaining[0K    2741 remaining[0K    2732 remaining[0K    2715 remaining[0K    2689 remaining[0K    2648 remaining[0K    2607 remaining[0K    2573 remaining[0K    2544 remaining[0K    2517 remaining[0K    2506 remaining[0K    2496 remaining[0K    2491 remaining[0K    2490 remaining[0K    2488 remaining[0K    2487 remaining[0K    2481 remaining[0K    2470 remaining[0K    2454 remaining[0K    2434 remaining[0K    2396 remaining[0K    2366 remaining[0K    2327 remaining[0K    2306 remaining[0K    2289 remaining[0K    2268 remaining[0K    2250 remaining[0K    2242 remaining[0K    2239 remaining[0K    2233 remaining[0K    2227 remaining[0K    2221 remaining[0K    2214 remaining[0K    2196 remaining[0K    2184 remaining[0K    2155 remaining[0K    2127 remaining[0K    2097 remaining[0K    2065 remaining[0K    2046 remaining[0K    2022 remaining[0K    2014 remaining[0K    2002 remaining[0K    1991 remaining[0K    1982 remaining[0K    1971 remaining[0K    1964 remaining[0K    1952 remaining[0K    1936 remaining[0K    1918 remaining[0K    1898 remaining[0K    1876 remaining[0K    1854 remaining[0K    1829 remaining[0K    1801 remaining[0K    1781 remaining[0K    1762 remaining[0K    1750 remaining[0K    1741 remaining[0K    1734 remaining[0K    1721 remaining[0K    1712 remaining[0K    1703 remaining[0K    1687 remaining[0K    1666 remaining[0K    1645 remaining[0K    1624 remaining[0K    1604 remaining[0K    1581 remaining[0K    1561 remaining[0K    1537 remaining[0K    1522 remaining[0K    1508 remaining[0K    1497 remaining[0K    1487 remaining[0K    1475 remaining[0K    1464 remaining[0K    1453 remaining[0K    1440 remaining[0K    1416 remaining[0K    1399 remaining[0K    1377 remaining[0K    1356 remaining[0K    1337 remaining[0K    1318 remaining[0K    1297 remaining[0K    1273 remaining[0K    1261 remaining[0K    1250 remaining[0K    1239 remaining[0K    1230 remaining[0K    1223 remaining[0K    1207 remaining[0K    1192 remaining[0K    1176 remaining[0K    1154 remaining[0K    1132 remaining[0K    1112 remaining[0K    1096 remaining[0K    1073 remaining[0K    1048 remaining[0K    1033 remaining[0K    1018 remaining[0K    998 remaining[0K    990 remaining[0K    983 remaining[0K    969 remaining[0K    962 remaining[0K    942 remaining[0K    923 remaining[0K    904 remaining[0K    883 remaining[0K    868 remaining[0K    851 remaining[0K    830 remaining[0K    816 remaining[0K    791 remaining[0K    772 remaining[0K    753 remaining[0K    738 remaining[0K    732 remaining[0K    722 remaining[0K    708 remaining[0K    696 remaining[0K    688 remaining[0K    666 remaining[0K    651 remaining[0K    629 remaining[0K    608 remaining[0K    592 remaining[0K    571 remaining[0K    550 remaining[0K    531 remaining[0K    515 remaining[0K    502 remaining[0K    484 remaining[0K    464 remaining[0K    456 remaining[0K    447 remaining[0K    437 remaining[0K    419 remaining[0K    396 remaining[0K    373 remaining[0K    361 remaining[0K    346 remaining[0K    328 remaining[0K    312 remaining[0K    296 remaining[0K    276 remaining[0K    253 remaining[0K    242 remaining[0K    229 remaining[0K    214 remaining[0K    205 remaining[0K    190 remaining[0K    171 remaining[0K    151 remaining[0K    131 remaining[0K    115 remaining[0K    90 remaining[0K    73 remaining[0K    51 remaining[0K    30 remaining[0K    16 remaining[0K    1 remaining[0K    0 remaining
+    stopping crud ...
+    storing structures ...
+    cleaning up ...
+    constructing features ...
+    data split: 11759:1470:1470
+    composition space ...  C N
+    adding atomic reference energies ... 
+    shuffling data ... 
+    building training data ...
+    building validation data ...
+    building testing data ...
+    launching forge ...
+    maximum 32 potentials
+    waiting for at least 30 potentials
+[0K    0 potentials[0K    0 potentials[0K    0 potentials[0K    0 potentials[0K    0 potentials[0K    4 potentials[0K    29 potentials[0K    32 potentials
+    stopping forge ...
+    got 32 potentials
+    generate combination ...
+
+    loaded 32 data derived potentials
+ 
+     combining ..
+ 
+     testing ..
+ 
+     training:   training RMSE/MAE:         62.52    24.07 meV Spearman : 0.99849 Max :    3470.60 meV for CN-535257-9036-13-SYbYpOz
+          ( training RMSE/MAE:              0.440    0.181 eV  Spearman : 0.99935 Max :      24.29  eV for CN-535257-9036-13-SYbYpOz )
+ 
+     validation: validation RMSE/MAE:       75.09    38.74 meV Spearman : 0.99733 Max :     618.42 meV for CN-16393-6497-13
+          ( validation RMSE/MAE:            0.528    0.285 eV  Spearman : 0.99864 Max :       4.33  eV for CN-16393-6497-13 )
+ 
+     testing:    testing RMSE/MAE:         337.88    55.15 meV Spearman : 0.99738 Max :   12179.07 meV for CN-22700-8279-3-ZKzPXWD
+          ( testing RMSE/MAE:               2.365    0.398 eV  Spearman : 0.99858 Max :      85.25  eV for CN-22700-8279-3-ZKzPXWD )
+ 
+     --------------------------------------------
+    removing training/validation/testing files ...
+
+    ==============================  2  ==============================
+
+    launching airss ...
+[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures[0K    0 structures
+    stopping airss ...
+    shaking structures ...
+    launching crud ...
+[0K    0 remaining
+    stopping crud ...
+    storing structures ...
+    cleaning up ...
+    constructing features ...
+    data split: 11759:1470:1470
+    composition space ...  C N
+    adding atomic reference energies ... 
+    shuffling data ... 
+    building training data ...
+    building validation data ...
+    building testing data ...
+    launching forge ...
+    maximum 32 potentials
+    waiting for at least 30 potentials
+
+    stopping chain ..

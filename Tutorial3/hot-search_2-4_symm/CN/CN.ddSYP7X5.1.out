@@ -1,0 +1,9 @@
+ 
+ training:  training RMSE/MAE:              50.40    18.92 meV Spearman : 0.99960 Max :    2462.41 meV for CN-16389-5040-6
+          ( training RMSE/MAE:              0.356    0.151 eV  Spearman : 0.99933 Max :      17.24  eV for CN-16389-5040-6 )
+ 
+ validation:validation RMSE/MAE:           268.41    59.94 meV Spearman : 0.99883 Max :    7958.24 meV for CN-535257-9036-13-SYbYpOz
+          ( validation RMSE/MAE:            1.879    0.438 eV  Spearman : 0.99856 Max :      55.71  eV for CN-535257-9036-13-SYbYpOz )
+ 
+ testing:   testing RMSE/MAE:              148.53    57.34 meV Spearman : 0.99861 Max :    1910.95 meV for CN-433020-725-5
+          ( testing RMSE/MAE:               1.041    0.419 eV  Spearman : 0.99832 Max :      13.38  eV for CN-433020-725-5 )

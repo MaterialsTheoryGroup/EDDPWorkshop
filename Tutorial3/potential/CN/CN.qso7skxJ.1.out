@@ -1,0 +1,9 @@
+ 
+ training:  training RMSE/MAE:              38.68    15.72 meV Spearman : 0.99966 Max :    1287.09 meV for CN-22700-8279-3-ZKzPXWD
+          ( training RMSE/MAE:              0.272    0.120 eV  Spearman : 0.99941 Max :       9.01  eV for CN-22700-8279-3-ZKzPXWD )
+ 
+ validation:validation RMSE/MAE:           220.38    60.05 meV Spearman : 0.99868 Max :    5511.15 meV for CN-535257-9036-13-SYbYpOz
+          ( validation RMSE/MAE:            1.543    0.430 eV  Spearman : 0.99836 Max :      38.58  eV for CN-535257-9036-13-SYbYpOz )
+ 
+ testing:   testing RMSE/MAE:              174.19    67.13 meV Spearman : 0.99841 Max :    1632.01 meV for CN-447961-2806-14
+          ( testing RMSE/MAE:               1.220    0.480 eV  Spearman : 0.99805 Max :      11.42  eV for CN-447961-2806-14 )

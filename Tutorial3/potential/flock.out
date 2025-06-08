@@ -1,0 +1,16 @@
+    loaded 30 data derived potentials
+ 
+     combining ..
+ 
+     testing ..
+ 
+     training:   training RMSE/MAE:         48.18    25.28 meV Spearman : 0.99726 Max :    2820.07 meV for CN-1086013-226-10-gkf5q6k
+          ( training RMSE/MAE:              0.339    0.185 eV  Spearman : 0.99792 Max :      19.74  eV for CN-1086013-226-10-gkf5q6k )
+ 
+     validation: validation RMSE/MAE:       65.33    38.22 meV Spearman : 0.99650 Max :     436.69 meV for CN-920879-4389-21-PMTLeBv
+          ( validation RMSE/MAE:            0.458    0.275 eV  Spearman : 0.99735 Max :       3.06  eV for CN-920879-4389-21-PMTLeBv )
+ 
+     testing:    testing RMSE/MAE:         170.42    42.16 meV Spearman : 0.99640 Max :    7156.61 meV for CN-535257-9036-13-SYbYpOz
+          ( testing RMSE/MAE:               1.193    0.303 eV  Spearman : 0.99724 Max :      50.10  eV for CN-535257-9036-13-SYbYpOz )
+ 
+     --------------------------------------------
