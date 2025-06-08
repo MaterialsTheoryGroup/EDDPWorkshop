@@ -56,7 +56,7 @@ $ ddpstore <seed>
 
 Now navigate to the eddp_search directory. Copy the archived eddp to the new directory and extract it.
 
-We want to run a search in of the C3N4 stoichiometry with 2-48 symmetry operations at a pressure of 150 GPa and a total number of 18 C3N4 formula units.
+We want to run a search in of the C3N4 stoichiometry with 2-4 symmetry operations at a pressure of 100 GPa and a total number of 18 C3N4 formula units.
 
 Try making the necessary changes to the cell file. Once you are satisfied, check your file against the help/CN.cell.
 
@@ -66,11 +66,11 @@ XXX
 
 Once your job has started running, check that structures are being generated but using ca -s.
 
-Whilst we wait for the structure search to proceed, familiarise yourself with the structure in help/lanieletal/C3N4.res Make a note of the space group and the number of formula units.
+Whilst we wait for the structure search to proceed, familiarise yourself with the structure in help/structures/C3N4.res Make a note of the space group and the number of formula units.
 
 Leave your search running, but in the interests of time we can skip forward to some ready-prepared search results.
 
-Navigate to the airss_2-48symm directory.
+Navigate to the search_2-4symm directory.
 
 Use cryan to look at the list of unique structures within a 100 meV/atom energy window from the hull.
 
@@ -132,7 +132,7 @@ Use the ramble help to understand what settings are being used. As computational
 
 Now use the slurm submission script to start the hot-airss on all 20 nodes, this will take a while so get a coffee.
 
-In the mean-time we will analyse results from an earlier run with an anneal time of XX at a temperature of XX
+In the mean-time we will analyse results from an earlier run with an anneal time of 100 ps at a temperature of 3650 K
 
 Navigate into the help/hot-search-complete directory
 
