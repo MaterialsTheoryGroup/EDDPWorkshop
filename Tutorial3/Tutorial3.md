@@ -142,5 +142,6 @@ Plot the structure density of states with the same gaussian broadening used for 
 
 Has the distribution changed?
 
+Can you identify any of the other structure mentioned in the Laniel et al. paper?
 
 
