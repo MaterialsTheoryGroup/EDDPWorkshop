@@ -56,7 +56,7 @@ $ ddpstore <seed>
 
 Now navigate to the eddp_search directory. Copy the archived eddp to the new directory and extract it.
 
-We want to run a search in of the C3N4 stoichiometry with 2-48 symmetry operations at a pressure of 150 GPa and a total number of X atoms.
+We want to run a search in of the C3N4 stoichiometry with 2-48 symmetry operations at a pressure of 150 GPa and a total number of 18 C3N4 formula units.
 
 Try making the necessary changes to the cell file. Once you are satisfied, check your file against the help/CN.cell.
 
@@ -70,16 +70,17 @@ Whilst we wait for the structure search to proceed, familiarise yourself with th
 
 Leave your search running, but in the interests of time we can skip forward to some ready-prepared search results.
 
+Navigate to the airss_2-48symm directory.
+
 Use cryan to look at the list of unique structures within a 100 meV/atom energy window from the hull.
 
-Is the Laniel structure there? Take some time to look through the various low energy structures in vesta.
+Is the Laniel et al. structure there? Take some time to look through the various low energy structures in vesta.
 
 Now generate a structural density of states to analyse the energy distribution of the various minima we have found
 
 ```console
 $ca -sd 0.01
 ```
-
 The 0.01 parameter is a gaussian smoothing, try a few parameters and decide on one that is most suitable.
 
 Can you identify different families of structures in the structure DOS?
@@ -106,7 +107,6 @@ $ ramble -ompnp 2 -m 1000 -ts 0.5 -p 150 -dr 0.01 -tt 500
 Now visualise the result in ovito.
 
 
-
 ## **3\. Running a hot-airss search.**
 
 Now stop your eddp search and move to the hot_search directory.
@@ -128,21 +128,19 @@ To run hot-airss we replace the -repose option with -ramble in our airss command
 $ cat CN.par
 
 ```
-
 Use the ramble help to understand what settings are being used. As computational resource is limited here we will only use a short MD anneal.
-
 
 Now use the slurm submission script to start the hot-airss on all 20 nodes, this will take a while so get a coffee.
 
 In the mean-time we will analyse results from an earlier run with an anneal time of XX at a temperature of XX
 
-Navigate into the XXX directory
+Navigate into the help/hot-search-complete directory
 
-List the structures wihtin a 100 meV per atom window after employing a tolerance of u 0.01. How are they difffeent to the high-symmetry aiss run?
-
+List the structures wihtin a 100 meV per atom window after employing a similarity tolerance of -u 0.01. How are the low energy structures different to the high-symmetry airss run? Have you now found the Laniel structure?
 
 Plot the structure density of states with the same gaussian broadening used for the airss search previously.
 
 Has the distribution changed?
+
 
 
