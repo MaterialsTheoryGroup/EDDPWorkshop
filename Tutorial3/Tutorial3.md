@@ -99,7 +99,7 @@ make a copy of the .eddp file to match your structure_id
 $ cp CN.eddp <structure_id>.eddp
 ```
 
-run ramble:\
+run ramble:
 ```console
 $ ramble -ompnp 2 -m 1000 -ts 0.5 -p 150 -dr 0.01 -tt 500
 ```
@@ -136,7 +136,7 @@ In the mean-time we will analyse results from an earlier run with an anneal time
 
 Navigate into the help/hot-search-complete directory
 
-List the structures wihtin a 100 meV per atom window after employing a similarity tolerance of -u 0.01. How are the low energy structures different to the high-symmetry airss run? Have you now found the Laniel structure?
+List the structures within a 100 meV per atom window after employing a similarity tolerance of -u 0.01. How are the low energy structures different to the high-symmetry airss run? Have you now found the Laniel structure?
 
 Plot the structure density of states with the same gaussian broadening used for the airss search previously.
 
