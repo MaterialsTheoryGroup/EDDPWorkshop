@@ -135,9 +135,9 @@ Now use the slurm submission script to start the hot-airss on all 20 nodes, this
 
 In the mean-time we will analyse results from an earlier run with an anneal time of 100 ps at a temperature of 3650 K
 
-Navigate into the help/hot-search-complete directory
+Navigate into the results directory, extract the hot-search.tar.gz archive and move into the new directory.
 
-List the structures within a 100 meV per atom window after employing a similarity tolerance of -u 0.01. How are the low energy structures different to the high-symmetry airss run? Have you now found the Laniel structure?
+List the structures within a 100 meV per atom window after employing a similarity tolerance of -u 0.01. How are the low energy structures different to the high-symmetry airss run? Have you now found the hP126 structure?
 
 Plot the structure density of states with the same gaussian broadening used for the airss search previously.
 
