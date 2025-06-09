@@ -131,7 +131,7 @@ $ cat CN.par
 ```
 Use the ramble help to understand what settings are being used. As computational resource is limited here we will only use a short MD anneal.
 
-Now use the slurm submission script to start the hot-airss on all 20 nodes, this will take a while so get a coffee.
+Now use the slurm submission script to start the hot-airss on all 20 cores, this will take a while so get a coffee.
 
 In the mean-time we will analyse results from an earlier run with an anneal time of 100 ps at a temperature of 3650 K
 
