@@ -12,7 +12,7 @@ Before embarking on an AIRSS search, it is essential to determine the current st
 
 ![Cubic_LiH](LiH_Fm-3m_export.png)
 <p style="text-align: center;"> 
-Fm-3m strcutre of LiH
+Fm-3m structure of LiH
 </p>
 
 
