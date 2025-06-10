@@ -1,0 +1,7 @@
+task : singlepoint
+xc_functional : LDA
+
+cut_off_energy : 500
+elec_energy_tol : 0.000001 eV
+
+opt_strategy : speed
