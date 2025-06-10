@@ -1,0 +1,4 @@
+symmetry_generate
+snap_to_symmetry
+
+kpoints_mp_spacing 0.03 1/Ang
