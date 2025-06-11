@@ -1,0 +1,40 @@
+#!/bin/sh
+
+export num_jobs=5
+export cores_per_job=4
+
+export total_cores=$((${num_jobs} * ${cores_per_job}))
+
+echo $total_cores
+
+
+#SBATCH --job-name=airss_eddp
+#SBATCH --time=00:50:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=${total_cores}
+#SBATCH --cpus-per-task=${cores_per_job}
+
+module load gnu12
+module load openmpi4/4.1.6
+export LD_LIBRARY_PATH=/usr/lib64/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/usr/lib64/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/SharedExe/openblas:/home/SharedExe/libs/$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/SharedExe/openblas:/home/SharedExe/libs/$LD_LIBRARY_PATH
+
+echo $(which parallel)
+
+
+#parallel -j $num_jobs srun --nodes=1 --ntasks=${total_cores} --cpus-per-task=$cores_per_job airss.pl -mpinp ${cores_per_job} -repose -pressure 0 -seed LiH
+for (( ni=0; ni<5; ni+=1 ))
+do
+        airss.pl -mpinp ${cores_per_job} -ramble -pressure 100 -seed CN &
+done
+
+sleep 5
+(echo; top -b -n 1 -u CAMusers; echo) >> top.txt
+sleep 15
+(echo; top -b -n 1 -u CAMusers; echo) >> top.txt
+sleep 60
+(echo; top -b -n 1 -u CAMusers; echo) >> top.txt
+
+wait
