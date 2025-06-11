@@ -4,7 +4,7 @@ module load openmpi4/4.1.6
 export PATH=/home/CAMusers/eddp_test_peter_yargla/gitrepo/ddp/bin:/home/CAMusers/eddp_test_peter_yargla/gitrepo/nn/bin:/home/CAMusers/eddp_test_peter_yargla/gitrepo/repose/bin:/home/CAMusers/eddp_test_peter_yargla/gitrepo/airss/bin:$PATH
 
 
-export PATH=~/eddp_test_peter_yargla/gitrepo/castep/obj/linux_x86_64_gfortran10--mpi/:~/eddp_test_peter_yargla/gitrepo/castep/obj/linux_x86_64_gfortran10--serial/:$PATH
+export PATH=/home/CAMusers/eddp_test_peter_yargla/gitrepo/castep/obj/linux_x86_64_gfortran10--mpi/:/home/CAMusers/eddp_test_peter_yargla/gitrepo/castep/obj/linux_x86_64_gfortran10--serial/:$PATH
 
 export LD_LIBRARY_PATH=/usr/lib64/:$LD_LIBRARY_PATH
 
