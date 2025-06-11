@@ -1,3 +1,6 @@
+module load gnu12
+module load openmpi4/4.1.6
+
 export PATH=/home/CAMusers/eddp_test_peter_yargla/gitrepo/ddp/bin:/home/CAMusers/eddp_test_peter_yargla/gitrepo/nn/bin:/home/CAMusers/eddp_test_peter_yargla/gitrepo/repose/bin:/home/CAMusers/eddp_test_peter_yargla/gitrepo/airss/bin:$PATH
 
 
