@@ -1,0 +1,52 @@
+#!/bin/bash -l
+
+#SBATCH --job-name=airss
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=20
+#SBATCH --cpus-per-task=1
+
+# --------------------------------------------------
+
+source ./.bashrc
+[[ -f ./.spawnrc ]] && source ./.spawnrc
+
+module load gnu12
+module load openmpi4/4.1.6
+export LD_LIBRARY_PATH=/usr/lib64/:$LD_LIBRARY_PATH
+export LIBRARY_PATH=/usr/lib64/:$LIBRARY_PATH
+export LD_LIBRARY_PATH=/home/SharedExe/openblas:/home/SharedExe/libs/$LD_LIBRARY_PATH
+export LIBRARY_PATH=/home/SharedExe/openblas:/home/SharedExe/libs/$LD_LIBRARY_PATH
+
+
+# set variables
+
+workdir="${SLURM_SUBMIT_DIR}"
+jobid="${SLURM_ARRAY_JOB_ID}"
+taskid="${SLURM_ARRAY_TASK_ID}"
+jids="${jobid}.${taskid}"
+prefix=".spawnpids"
+
+program='airss'
+mpinp='4'
+export OMP_NUM_THREADS=1
+seed='LiH'
+
+# launch program
+
+(echo; top -b -n 1 -u $USER; echo) >> top.txt
+
+# loop over the nodes assigned to the job
+~/bin/parallel -N0 airss.pl -mpinp 4 -seed LiH ::: {1..5} &
+
+(echo; top -b -n 1 -u $USER; echo) >> top.txt
+sleep 10
+(echo; top -b -n 1 -u $USER; echo) >> top.txt
+sleep 60
+(echo; top -b -n 1 -u $USER; echo) >> top.txt
+
+wait
+sleep 5
+
+
+exit 0
