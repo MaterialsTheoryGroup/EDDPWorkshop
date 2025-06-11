@@ -47,10 +47,10 @@ While running your search, you can play with the built-in AIRSS option for setti
 
 
 For the people who attend the summer school, it's possible to run AIRSS with a different DFT code such as VASP.\
-The search is a repeat of that performed in 1., except this time the search will be performed using the VASP code. First create a `C2.POTCAR` file. The `airss.pl` script is used in the usual way, except the `-vasp` flag it set.
+The search is a repeat of that performed in 1., except this time the search will be performed using the VASP code. First create a `C2.POTCAR` file. The `airss.pl` script is used in the usual way, except the `-vasp` flag is set.
 
 ```console
-$ spawn airss.pl -vasp -seed LiH
+$ airss.pl -vasp -seed LiH
 ```
 
 ## 3\. Bonus : Carbon under pressure !
@@ -76,7 +76,7 @@ KPOINTS_MP_SPACING 0.07
 
 The only AIRSS related command in the cell file is `#MINSEP=1.3`. This is not essential for the light elements, but for transition metals it is important to avoid core overlap to prevent poor convergence of the electronic structure. The k-points sampling density is 0.07, with 0.05 more appropriate for metallic (or nearly metallic) systems.
 
-How can you specify the pressure (100 GPa) when running  `airss.pl`? Type `airss.pl -h` if need be.
+How can you specify the pressure (100 GPa) when running  `airss.pl`? Type `airss.pl -h` if need be. Edit your castep_search.job so the command is as shown below:
 
 ```console
 $ airss.pl -press 100 -max 10 -seed C2
