@@ -27,7 +27,7 @@ You can try now, your demonstrators will be happy to help you !
 ## 3. Molecular Unit Searching
 
 
-In many cases, we may want to constrain our search to consider molecular units. For example when looking for new phases of water ice, we may want to constrain the search to H20 units, rather than all possible structures with a 2:1, H:0 stoichiometry.
+In many cases, we may want to constrain our search to consider molecular units. For example when looking for new phases of water ice, we may want to constrain the search to H20 units, rather than all possible structures with a 2:1, H:O stoichiometry.
 
 To search with molecular units in airss we can make some simple changes to our `.cell` file.
 ```console
@@ -48,9 +48,11 @@ Once we have set our molecular units we can use the #UNTIE command.
 ## 4. Distillation of a mattersim potential - (optional and to be continued at home!)
 
 
-Universal potentials sit somewhere between DFT and EDDPs in terms of speed. This can
+Universal potentials sit somewhere between DFT and EDDPs in terms of speed.
 
 The final exercise will be 'distillation' of a potential from mattersim generated data.
+
+The general idea here is to rapidly train a potential that is a few orders of magnitude faster than a universal potential, so that we can scale up our searches and molecular dynamics (without having to use a GPU).
 
 Step one of this exercise is to install the eddp suite on your laptop.
 
