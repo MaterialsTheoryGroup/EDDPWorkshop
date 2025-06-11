@@ -1,0 +1,84 @@
+## ======================================================================================
+## Yargla
+## "Default : 1 node, 12 procs, 48h"
+## ======================================================================================
+#!/bin/sh
+
+%block default
+#SBATCH --job-name=default
+#SBATCH --time=00:20:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=20
+#SBATCH --cpus-per-task=1
+
+ncores_per_node=20
+nnodes_per_subjob=1
+ncores_per_subjob=20
+%endblock default
+
+
+%block airss
+#SBATCH --job-name=airss
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=32
+#SBATCH --cpus-per-task=1
+
+ncores_per_node=20
+nnodes_per_subjob=1
+ncores_per_subjob=20
+%endblock airss
+
+
+%block crud
+#SBATCH --job-name=crud
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=20
+#SBATCH --cpus-per-task=1
+ncores_per_node=20
+nnodes_per_subjob=1
+ncores_per_subjob=20
+%endblock crud
+
+
+## Note: GNU-parallel job / single node
+%block franks
+#SBATCH --job-name=franks
+#SBATCH --time=00:30:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --cpus-per-task=20
+
+ncores_per_node=20
+nnodes_per_subjob=1
+ncores_per_subjob=20
+%endblock franks
+
+
+## Note: OpenMP job
+%block forge
+#SBATCH --job-name=forge
+#SBATCH --time=00:20:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --cpus-per-task=20
+
+ncores_per_node=20
+nnodes_per_subjob=1
+ncores_per_subjob=20
+%endblock forge
+
+
+## Note: OpenMP job / single node / short
+%block flock
+#SBATCH --job-name=flock
+#SBATCH --time=00:20:00
+#SBATCH --nodes=1
+#SBATCH --tasks-per-node=1
+#SBATCH --cpus-per-task=20
+
+ncores_per_node=20
+nnodes_per_subjob=1
+ncores_per_subjob=20
+%endblock flock
