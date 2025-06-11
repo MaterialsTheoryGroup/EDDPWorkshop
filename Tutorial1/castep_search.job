@@ -8,7 +8,6 @@
 
 # --------------------------------------------------
 
-source ./.bashrc
 [[ -f ./.spawnrc ]] && source ./.spawnrc
 
 module load gnu12
@@ -37,7 +36,7 @@ seed='LiH'
 (echo; top -b -n 1 -u $USER; echo) >> top.txt
 
 # loop over the nodes assigned to the job
-/home/CAMusers/bin/parallel -N0 airss.pl -mpinp 4 -seed LiH ::: {1..5} &
+~/bin/parallel -N0 airss.pl -mpinp 4 -seed LiH ::: {1..5} &
 
 (echo; top -b -n 1 -u $USER; echo) >> top.txt
 sleep 10
