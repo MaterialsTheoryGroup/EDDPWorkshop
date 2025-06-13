@@ -25,7 +25,8 @@ First, navigate to the to potential directory. You should see the input and outp
 
 ```console
 
-$ls
+$ cd potential
+$ ls
 
 atomic.data  CN  CN.cell  CN.eddp  CN.param  data.res.xz  flock.out  help  logs  marks-save  plots
 ```
