@@ -9,9 +9,9 @@ In this example we will use the mattersim potential developed by microsoft to re
 This simply requires setting the option `-matsim` in [airss.pl](http://airss.pl/):
 
 ```console
-spawn airss.pl -s <seed> -matsim -mpinp 4
+airss.pl -s <seed> -matsim -mpinp 4
 ```
-
+copy search.job in Tutorial4 directory and modify it to run airss.pl with mattersim as explained above.
 Run this command and check to make sure that structures are being generated.
 
 You should notice that structure generation is slow compared to an eddp. This is to be expected as the mattersim potential uses a large model, so calculating energies (i.e. inference through the neural network) is significantly slower. Of course, the trade-off is that we do not need to train a potential from scratch each time.
