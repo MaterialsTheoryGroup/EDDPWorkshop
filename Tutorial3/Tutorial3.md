@@ -59,7 +59,7 @@ Now navigate to the search_2-4_symm directory. Copy the archived eddp to the new
 
 We want to run a search in of the C3N4 stoichiometry with 2-4 symmetry operations at a pressure of 100 GPa and a total number of 18 C3N4 formula units.
 
-Try making the necessary changes to the cell file. Once you are satisfied, check your file against the help/CN.cell.
+Try making the necessary changes to the cell file. Once you are satisfied, check your file against the help/search/CN.cell.
 
 Submit the search with the following command:
 
