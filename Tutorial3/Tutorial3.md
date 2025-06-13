@@ -76,6 +76,10 @@ Navigate to the results/search_2-4symm directory.
 
 Use cryan to look at the list of unique structures within a 100 meV/atom energy window from the hull.
 
+```console
+$ca -de 0.1 -r
+```
+
 Is the hP126-C3N4 structure there? Take some time to look through the various low energy structures in vesta.
 
 Now generate a structural density of states to analyse the energy distribution of the various minima we have found
@@ -92,7 +96,7 @@ Now we will take a high energy structure from our search and run a short molecul
 first convert the res file to a cell file (note: some <> characters here indicate variables for you to change, others redirect input to files or cryan):
 
 ```console
-$ ca -res -cell < <structure_id>.res > <structure_id>.cell
+$ cabal res cell < <structure_id>.res > <structure_id>.cell
 ```
 
 make a copy of the .eddp file to match your structure_id 
