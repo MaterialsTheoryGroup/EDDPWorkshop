@@ -14,10 +14,13 @@ echo $total_cores
 #SBATCH --tasks-per-node=${total_cores}
 #SBATCH --cpus-per-task=${cores_per_job}
 
+
+module purge
 module load gnu12
 module load openmpi4/4.1.6
-export LD_LIBRARY_PATH=/usr/lib64/:$LD_LIBRARY_PATH
-export LIBRARY_PATH=/usr/lib64/:$LIBRARY_PATH
+module load castep
+module load airss
+module load ddp-batch
 export LD_LIBRARY_PATH=/home/SharedExe/openblas:/home/SharedExe/libs/$LD_LIBRARY_PATH
 export LIBRARY_PATH=/home/SharedExe/openblas:/home/SharedExe/libs/$LD_LIBRARY_PATH
 
